@@ -20,14 +20,14 @@ namespace AssignmentAPI.Controllers
             this.db = db;
         }
 
-        // GET: api/questions
+        // GET: api/questioners
         [HttpGet]
         public IEnumerable<questioner> Get()
         {
             return db.questioner.OrderBy(a => a.first_name).ToList();
         }
 
-        // GET: api/questions/5
+        // GET: api/questioners/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
@@ -40,7 +40,7 @@ namespace AssignmentAPI.Controllers
             return Ok(questioner);
         }
 
-        // POST: api/questions
+        // POST: api/questioners
         [HttpPost]
         public ActionResult Post([FromBody] questioner questioner)
         {
@@ -54,7 +54,7 @@ namespace AssignmentAPI.Controllers
             return CreatedAtAction("Post", questioner);
         }
 
-        // PUT: api/questions/5
+        // PUT: api/questioners/5
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] questioner questioner)
         {
@@ -68,7 +68,7 @@ namespace AssignmentAPI.Controllers
             return NoContent();
         }
 
-        // DELETE: api/questions/5
+        // DELETE: api/questioners/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
