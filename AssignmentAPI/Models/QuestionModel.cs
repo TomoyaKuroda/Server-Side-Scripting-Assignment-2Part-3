@@ -12,8 +12,9 @@ namespace AssignmentAPI.Models
         {
         }
 
-        // reference  the question model for CRUD
+        // reference  the question/questioner model for CRUD
         public virtual DbSet<question> question { get; set; }
+        public virtual DbSet<questioner> questioner { get; set; }
 
     }
 
