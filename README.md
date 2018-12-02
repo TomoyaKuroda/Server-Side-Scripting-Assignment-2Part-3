@@ -5,7 +5,7 @@
 <li><a href="https://server-side-scripting-assignment-2-part-3.azurewebsites.net/api/questioners">This API</a> allows you to Create-Read-Update-Delete questioners table.</li>
 </ol>
 
-<p>Bonus part: I enabled CORS. You can try CORS request with this code.</p>
+<p>Bonus part: I changed Startup.cs and enabled CORS. You can try CORS request with this code.</p>
 <code>
 fetch('https://server-side-scripting-assignment-2-part-3.azurewebsites.net/api/questions').then(response => {
   return response.json();
